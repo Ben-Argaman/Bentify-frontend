@@ -29,14 +29,14 @@ const HomeScreen = () => {
 
   const getArtistAlbums = async (artist) => {
     const { data } = await axios.get(
-      `http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${artist}&api_key=e1c393f9c0cc727b780db859810b26bc&format=json`
+      `https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${artist}&api_key=e1c393f9c0cc727b780db859810b26bc&format=json`
     );
     console.log(data);
     setArtistAlbums(data.topalbums ? data.topalbums.album : "");
   };
   const loadAlbumTracks = async (artist, album) => {
     const { data } = await axios.get(
-      `http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=e1c393f9c0cc727b780db859810b26bc&artist=${artist}&album=${album}&format=json`
+      `https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=e1c393f9c0cc727b780db859810b26bc&artist=${artist}&album=${album}&format=json`
     );
     data.album.tracks.track.length > 2 && setSearchResults(data.album);
   };
