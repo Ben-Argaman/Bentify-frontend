@@ -150,7 +150,7 @@ const HomeScreen = () => {
           <Player
             track={chosenTrack}
             albumImage={songImage}
-            source={`http://localhost:5002/api/${query} audio`}
+            source={`https://bentify-api.onrender.com/api/${query} audio`}
             isSongClicked={songClicked}
           />
         </div>
