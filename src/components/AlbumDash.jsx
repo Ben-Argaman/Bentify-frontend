@@ -6,7 +6,7 @@ const AlbumDash = ({ albums, loadAlbumTracks }) => {
 
   const getChartTracks = async () => {
     const { data } = await axios.get(
-      "http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=e1c393f9c0cc727b780db859810b26bc&format=json"
+      "https://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=e1c393f9c0cc727b780db859810b26bc&format=json"
     );
     setDashItems(data.tracks.track);
   };
