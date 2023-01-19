@@ -5,9 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { disableReactDevTools } from "@fvilers/disable-react-devtools";
-
-process.env.NODE.ENV === "production" && disableReactDevTools();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
